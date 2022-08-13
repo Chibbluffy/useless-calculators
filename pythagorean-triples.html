@@ -35,7 +35,9 @@
             const a = m*m - n*n;
             const b = 2*m*n;
             const c = m*m + n*n;
-            return [a, b, c];
+            const triple = [a, b, c];
+            triple.sort((a, b) => {return a-b;});
+            return triple;
         }
 
         function calculateNextTriple(m, n) {
@@ -75,7 +77,7 @@
             <div class="text-center">
                 <button type="button" class="btn btn-primary" onclick="appendNextTriple()">Generate Triple</button>
             </div>
-            <h2>Triplets: </h2>
+            <h2>Triples: </h2>
             <h3 id="triples">
             </h3>
         </div>
